@@ -1,4 +1,4 @@
-function eqArrays(a, b) {
+const eqArrays = function eqArrays(a, b) {
 
     const firstArray = a;
     const secondArray = b;
@@ -10,15 +10,17 @@ function eqArrays(a, b) {
         console.log('FirstArray: ', firstArray[i], ' SecondArray: ', secondArray[i])
         if (firstArray[i] !== secondArray[i]) return false;
     }
+
     return true;
 }
 
-const assertEqual = function assertEqual(a, b) {
+const assertArraysEqual = function assertArraysEqual(a, b) {
 
     if (a === b)
         console.log("The two arrays are equal");
+
     else if (a !== b)
         console.log("The two arrays are not equal");
 }
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
