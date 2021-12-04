@@ -15,9 +15,12 @@ function eqArrays(a, b) {
     if (firstArray.length !== secondArray.length) return false;
 
     for (let i = 0; i < firstArray.length; i++) {
+
         console.log('FirstArray: ', firstArray[i], ' SecondArray: ', secondArray[i])
+
         if (firstArray[i] !== secondArray[i]) return false;
     }
+
     return true;
 }
 
@@ -32,8 +35,11 @@ const eqObjects = function(object1, object2) {
         for (let key in object1) {
 
             if (Array.isArray(object1[key])) {
+
                 return eqArrays(object1[key], object2[key])
+
             } else {
+
                 if (object1[key] !== object2[key]) return false;
             }
 
