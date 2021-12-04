@@ -7,20 +7,21 @@ const assertEqual = function assertEqual(actual, expected) {
 
 }
 
-const allItems = ['a', 'a', 'b', 'c', 'd', 'e', 'a'];
+// const allItems = ['a', 'a', 'b', 'c', 'd', 'e', 'a'];
 
-const itemsToCount = {
-    a: true,
-    d: true,
-    b: false,
-    f: true
-};
+// const itemsToCount = {
+//     a: true,
+//     d: true,
+//     b: false,
+//     f: true
+// };
 
 const countOnly = (allItems, itemsToCount) => {
 
     let obj = {};
 
     for (let item of allItems) {
+        console.log(item);
         if (itemsToCount[item] === true) {
             //obj[item] += obj[item] || 0;
             if (!obj[item]) {
