@@ -5,9 +5,8 @@ const eqArrays = function eqArrays(a, b) {
 
     if (firstArray.length !== secondArray.length) return false;
 
-    // matching each element of firstArray with secondArray
     for (let i = 0; i < firstArray.length; i++) {
-        console.log('FirstArray: ', firstArray[i], ' SecondArray: ', secondArray[i])
+
         if (firstArray[i] !== secondArray[i]) return false;
     }
 
